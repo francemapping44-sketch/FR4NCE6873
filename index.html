@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Open Links</title>
+    <meta charset="UTF-8">
+    <title>Sequential Redirect</title>
 </head>
 <body>
 
-<h1>Click to Continue</h1>
-
-<button id="go">Open Both Links</button>
+<h1>Redirecting...</h1>
+<p>Please wait.</p>
 
 <script>
-document.getElementById("go").addEventListener("click", () => {
+    // Go to the first URL
     window.open("https://maper.info/RNZFwf", "_blank");
-    window.open("https://maper.info/googlemapaddress", "_blank");
-});
+
+    // Then go to the second URL after 5 seconds
+    setTimeout(function() {
+        window.location.href = "https://maper.info/googlemapaddress";
+    }, 5000);
 </script>
 
 </body>
