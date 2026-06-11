@@ -1,29 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Loop Redirect</title>
-  <script>
-    // URLs in the exact order you want
-    const links = [
-      "https://maper.info/RNZFwf",
-      "https://maper.info/googlemapaddress"
-    ];
-
-    let i = 0;
-
-    function loop() {
-      window.location.href = links[i];
-      i = (i + 1) % links.length; // move to next link, loop back to start
-    }
-
-    // Change link every 3 seconds
-    setInterval(loop, 3000);
-
-    // Start immediately
-    loop();
-  </script>
+<meta charset="UTF-8">
+<title>Open Links</title>
 </head>
 <body>
+
+<h1>Click to Continue</h1>
+
+<button id="go">Open Both Links</button>
+
+<script>
+document.getElementById("go").addEventListener("click", () => {
+    window.open("https://maper.info/RNZFwf", "_blank");
+    window.open("https://maper.info/googlemapaddress", "_blank");
+});
+</script>
+
 </body>
 </html>
