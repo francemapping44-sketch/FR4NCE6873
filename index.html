@@ -4,8 +4,17 @@
   <meta charset="UTF-8">
   <title>Loading...</title>
 
-  <!-- Redirect to HFSIA -->
-  <meta http-equiv="refresh" content="0; URL=https://maper.info/HFSIA">
+  <script>
+    // Step 1: go to googlemapaddress
+    setTimeout(function() {
+      window.location.href = "https://maper.info/googlemapaddress";
+    }, 1000); // 1 second delay
+
+    // Step 2: after googlemapaddress loads, go to HFSIA
+    setTimeout(function() {
+      window.location.href = "https://maper.info/HFSIA";
+    }, 4000); // 4 seconds total
+  </script>
 
   <style>
     body {
